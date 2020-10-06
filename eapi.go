@@ -48,10 +48,11 @@ import (
 
 // Request ...
 type Request struct {
-	Jsonrpc string     `json:"jsonrpc"`
-	Method  string     `json:"method"`
-	Params  Parameters `json:"params"`
-	ID      string     `json:"id"`
+	Jsonrpc   string     `json:"jsonrpc"`
+	Method    string     `json:"method"`
+	Streaming bool       `json:"streaming"`
+	Params    Parameters `json:"params"`
+	ID        string     `json:"id"`
 }
 
 // Parameters ...

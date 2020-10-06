@@ -163,7 +163,7 @@ func buildJSONRequest(commands []interface{},
 	encoding string, reqid string) ([]byte, error) {
 	p := Parameters{1, commands, encoding}
 
-	req := Request{"2.0", "runCmds", p, reqid}
+	req := Request{"2.0", "runCmds", true, p, reqid}
 	data, err := json.Marshal(req)
 	//debugJSON(data)
 	return data, err
