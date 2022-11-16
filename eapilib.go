@@ -193,7 +193,7 @@ const defaultUnixSocket = "/var/run/command-api.sock"
 //  Newly created SocketEapiConnection
 func NewSocketEapiConnection(transport string, host string, username string,
 	password string, port int) EapiConnectionEntity {
-	conn := EapiConnection{transport: transport, host: host, port: port, timeOut: 60}
+	conn := EapiConnection{transport: transport, host: host, port: port, timeOut: 120}
 	return &SocketEapiConnection{conn}
 }
 
